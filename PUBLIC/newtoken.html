@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        p {
+            font-size: 25px;
+            color: #333;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p>Add a new user:</p>
+    <form action="/new" method="post">
+        <input type="text" name="username" placeholder="Enter username" /><br />
+        <button>Save</button>
+    </form>
+    <a href="http://localhost:3000">[home]</a>
+</body>
+</html>
+        
