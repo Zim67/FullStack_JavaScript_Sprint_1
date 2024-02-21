@@ -1,0 +1,26 @@
+{
+    "name": "weekfiveargv",
+    "version": "1.0.0",
+    "description": "",
+    "main": "myapp.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/prawstho/WeekFiveArgv.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/prawstho/WeekFiveArgv/issues"
+    },
+    "homepage": "https://github.com/prawstho/WeekFiveArgv#readme",
+    "dependencies": {
+      "crc": "^4.3.2",
+      "date-fns": "^2.30.0",
+      "express": "^4.18.2",
+      "uuid": "^9.0.1"
+    }
+  }
