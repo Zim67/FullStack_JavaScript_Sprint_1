@@ -1,0 +1,7 @@
+myapp <command> <option>
+
+Usage:
+
+myapp config --show                     displays a list of the current config settings
+myapp config --reset                    resets the config file with default settings
+myapp config --set [key] [new value]    sets a specific config key setting
