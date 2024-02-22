@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate New Token</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            block-size: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            font-family: monospace;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Ensure consistent spacing */
+        }
+        input[type="text"], button {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .token-display {
+            margin-top: 20px;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate New Token</h1>
+        <form id="tokenForm">
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            <button type="submit">Generate Token</button>
+        </form>
+        <div class="token-display" id="generatedToken">Token: <span>N/A</span></div>
+    </div>
+
+    <script>
+        document.getElementById('tokenForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value.trim();
+
+            if(username === '') {
+                alert('Username is required!');
+                return;
+            }
+
+            // Simulate token generation for demonstration purposes
+            // In a real scenario, you would make an AJAX call to your backend to generate the token
+            const simulatedToken = 'Token_' + Math.random().toString(36).substr(2, 9);
+            document.getElementById('generatedToken').innerHTML = `Token: <span>${simulatedToken}</span>`;
+
+            // Optionally, send the username to the server and handle the response
+            // This requires server-side logic to generate and return a token
+        });
+    </script>
+</body>
+</html>
